@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TaxiHaiti</string>
+    <string name="title_activity_liste_taxi">ListeTaxi</string>
+    <string name="title_activity_add_taxi">AddTaxi</string>
+    <string name="title_activity_setting">Setting</string>
+    <string name="title_activity_details">Details</string>
+    <string name="title_activity_findtaxi">Findtaxi</string>
+</resources>
