@@ -8,20 +8,31 @@ import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import com.juliodev.taxihaiti.mFirebase.Fire;
 
 public class Findtaxi extends AppCompatActivity {
 
+    final static String DB_URL = "https://taxihaiti-b8535.firebaseio.com/";
+    Fire fire;
+    ListView lv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_findtaxi);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Chache yon taxi ");
+        setTitle("Entrer le lieu ...");
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        lv = (ListView) findViewById(R.id.lvMessage);
+        fire = new Fire(this,lv,DB_URL);
+        fire.retriveData();
 
     }
 
@@ -58,7 +69,7 @@ public class Findtaxi extends AppCompatActivity {
             case android.R.id.home:
                 Intent i = new Intent(Findtaxi.this, ListeTaxi.class);
                 finish();
-                overridePendingTransition(android.R.anim.slide_out_right,android.R.anim.slide_in_left);
+                overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
             default:
                 return super.onOptionsItemSelected(item);
         }

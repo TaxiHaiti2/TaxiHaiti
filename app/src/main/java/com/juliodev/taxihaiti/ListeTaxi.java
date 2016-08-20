@@ -9,9 +9,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.ListView;
+
+import com.juliodev.taxihaiti.mFirebase.Fire;
 
 public class ListeTaxi extends AppCompatActivity {
+
+    final static String DB_URL = "https://taxihaiti-b8535.firebaseio.com/";
+    Fire fire;
+    ListView lv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +31,10 @@ public class ListeTaxi extends AppCompatActivity {
         String title = actionBar.getTitle().toString(); // get the title
         getSupportActionBar().setLogo(R.drawable.ic_action_logo);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
+
+        lv = (ListView) findViewById(R.id.lvMessage);
+        fire = new Fire(this,lv,DB_URL);
+        fire.retriveData();
 
        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -45,16 +55,6 @@ public class ListeTaxi extends AppCompatActivity {
                 overridePendingTransition(0,0);
             }
         });
-
-        ImageView ivImage1 = (ImageView) findViewById(R.id.ivImage1);
-        ivImage1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent details = new Intent(ListeTaxi.this, Details.class);
-                startActivity(details);
-            }
-        });
-
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -82,7 +82,7 @@ public class ListeTaxi extends AppCompatActivity {
     private void onFind() {
         Intent find =  new Intent(ListeTaxi.this,Findtaxi.class);
         startActivity(find);
-        overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+        //overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
     }
 
 
