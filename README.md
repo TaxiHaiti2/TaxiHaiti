@@ -27,4 +27,5 @@ Allow a user to call a taxi car , or moto in the world
 
 * [ ] REST FULL API: firebase
 
-https://github.com/TaxiHaiti2/TaxiHaiti/blob/master/design.gif
+
+https://github.com/TaxiHaiti2/TaxiHaiti/blob/master/design2.gif
