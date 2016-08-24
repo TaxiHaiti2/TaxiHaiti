@@ -16,8 +16,6 @@ import java.util.ArrayList;
  * Created by Julio on 8/19/2016.
  */
 public class CustomAdapter extends BaseAdapter {
-
-
     Context c;
     ArrayList<InsertUser> insertUsers;
     LayoutInflater inflater;

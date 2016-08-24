@@ -14,7 +14,10 @@ public class MyViewHolder {
     TextView hName,hAddress, hPhone,Hplaque,hTypeVehicule;
     public MyViewHolder(View itemView) {
         hImageUser = (ImageView) itemView.findViewById(R.id.ivImageUser);
-        hName = (TextView) itemView.findViewById(R.id.tvName);
+        hName = (TextView) itemView.findViewById(R.id.facTvName);
         hAddress = (TextView) itemView.findViewById(R.id.tvAdresse);
+        hPhone = (TextView) itemView.findViewById(R.id.tvPhone);
+        Hplaque = (TextView) itemView.findViewById(R.id.tvPlaque);
+        hTypeVehicule = (TextView) itemView.findViewById(R.id.typevehicule);
     }
 }

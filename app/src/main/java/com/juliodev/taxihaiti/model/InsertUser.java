@@ -1,9 +1,11 @@
 package com.juliodev.taxihaiti.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Julio on 8/11/2016.
  */
-public class InsertUser {
+public class InsertUser implements Serializable {
 
     public String getNomcomplet() {
         return nomcomplet;
@@ -72,4 +74,5 @@ public class InsertUser {
         this.plaque = plaque;
         this.typevehicule = typevehicule;
     }
+
 }

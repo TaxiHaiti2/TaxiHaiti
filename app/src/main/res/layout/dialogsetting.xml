@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
+    android:layout_margin="20dp"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.juliodev.taxihaiti.Setting"
-    tools:showIn="@layout/activity_setting"
-    android:background="#FFf">
+    tools:context="com.juliodev.taxihaiti.Setting">
 
     <TextView
         android:layout_width="300dp"
@@ -31,19 +26,19 @@
         android:ems="10"
         android:id="@+id/tvsetting"
         android:drawableLeft="@drawable/ic_action_location"
-        android:layout_marginTop="54dp"
         android:layout_below="@+id/preferenceExplication"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/preferenceExplication"
+        android:layout_alignStart="@+id/preferenceExplication"
+        android:layout_alignRight="@+id/preferenceExplication"
+        android:layout_alignEnd="@+id/preferenceExplication" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Valider"
-        android:id="@+id/btVvalPref"
-        android:textColor="#fff"
+        android:id="@+id/btVvalPrefbtVvalPref"
+        android:textColor="#ff4081"
         android:layout_below="@+id/tvsetting"
-        android:background="#ff4081"
         android:layout_alignRight="@+id/tvsetting"
-        android:layout_alignEnd="@+id/tvsetting"
-        android:alpha="0" />
+        android:layout_alignEnd="@+id/tvsetting" />
 </RelativeLayout>

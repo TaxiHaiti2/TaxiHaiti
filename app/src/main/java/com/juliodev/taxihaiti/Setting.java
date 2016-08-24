@@ -3,15 +3,17 @@ package com.juliodev.taxihaiti;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class Setting extends AppCompatActivity {
-
+    TextView tvsetting;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,13 +25,19 @@ public class Setting extends AppCompatActivity {
         String title = actionBar.getTitle().toString(); // get the title
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        //caher
+        getSupportActionBar().hide();
+        FloatingActionButton preference = (FloatingActionButton) findViewById(R.id.fab);
+        preference.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "RDefinie une preference", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                tvsetting = (EditText)findViewById(R.id.tvsetting);
+
+                    Intent i = new Intent (Setting.this, ListeTaxi.class);
+                    startActivity(i);
+                    tvsetting.getText().toString();
+                    // Share preferences
+                    Toast.makeText(Setting.this, "Vous venez de definir" + tvsetting.getText().toString()+"comme preference", Toast.LENGTH_LONG).show();
             }
         });
     }
