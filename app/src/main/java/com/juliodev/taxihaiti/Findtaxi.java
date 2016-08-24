@@ -70,7 +70,7 @@ public class Findtaxi extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextSubmit(String query) {
-                Toast.makeText(Findtaxi.this, "Chauffeur a  " + query ,Toast.LENGTH_LONG).show();
+                Toast.makeText(Findtaxi.this, "Chauffeur à  " + query ,Toast.LENGTH_LONG).show();
                 Intent details =  new Intent(Findtaxi.this, AfterSearch.class);
                 //GESTION DU DETAISL
                 startActivity(details);
