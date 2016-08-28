@@ -14,7 +14,7 @@
         android:textSize="10sp"
         android:layout_margin="10dp"
         android:padding="5dp"
-        android:text="En definissant la zone de preference , tous les recherche seront effectuers en fonction du zone choisit "
+        android:text="En définissant la zone de préférence , tous les recherche seront effectués en fonction du zone choisit "
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Zone de preference"
+        android:hint="Zone de préférence"
         android:ems="10"
         android:id="@+id/tvsetting"
         android:drawableLeft="@drawable/ic_action_location"

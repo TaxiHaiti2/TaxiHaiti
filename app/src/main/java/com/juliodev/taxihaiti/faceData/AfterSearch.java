@@ -22,7 +22,7 @@ public class AfterSearch extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar(); // or getActionBar();
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Liste taxi dispo a delmas 33"); // set the top title
+        getSupportActionBar().setTitle("Liste taxi dispo à delmas 33"); // set the top title
         String title = actionBar.getTitle().toString(); // get the title
 
         getSupportActionBar().setDisplayUseLogoEnabled(true);

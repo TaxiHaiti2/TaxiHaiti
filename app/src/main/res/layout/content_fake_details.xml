@@ -15,8 +15,7 @@
         android:layout_marginBottom="30dp"
         android:id="@+id/ivProfil"
         android:background="#fff"
-        android:src="@drawable/ic_action_userform"
-
+        android:src="@drawable/nopix"
         android:scaleType="centerCrop"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -29,7 +28,7 @@
         android:padding="10dp"
         android:drawableLeft="@drawable/ic_action_userform"
         android:ems="10"
-        android:id="@+id/facTvName"
+        android:id="@+id/tvName"
         android:layout_below="@+id/ivProfil"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -47,7 +46,7 @@
         android:drawableLeft="@drawable/ic_action_name"
         android:ems="10"
         android:id="@+id/tvPhone"
-        android:layout_below="@+id/facTvName"
+        android:layout_below="@+id/tvName"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"

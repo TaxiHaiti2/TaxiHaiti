@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#365899"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".login.Facebook_login"
+    tools:showIn="@layout/activity_facebook_login">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView2"
+        android:src="@drawable/taxic"
+        android:scaleType="fitEnd"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_marginBottom="89dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:text="TaxiHaiti"
+        android:textSize="50dp"
+        android:textColor="#fff"
+        android:shadowColor="@color/authui_colorAccent"
+        android:layout_marginTop="57dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/login_button"
+        android:layout_alignEnd="@+id/login_button" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed"
+        android:layout_margin="16dp"
+        android:text=" C&apos;est le moyen le plus simple de se déplacer en ville. commander un véhicule là où vous vous trouvez.Votre chauffeur sait exactement où aller. Cerise sur le gâteau :TaxiHaïti ne gère pas les paiements "
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:shadowColor="@color/authui_colorAccent"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
