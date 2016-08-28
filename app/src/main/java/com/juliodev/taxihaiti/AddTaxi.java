@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
@@ -32,6 +33,7 @@ public class AddTaxi extends AppCompatActivity {
     String mCurrentPhotoPath;
     //Ajouter un utilisateur
     EditText tvName,tvPhone,tvAdresse,tvPlaque,typevehicule;
+    TextView tvProfilUrl;
     ImageView ivProfil;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     @Override
@@ -50,11 +52,12 @@ public class AddTaxi extends AppCompatActivity {
 
         // Gestion d'ajout utilisateur
 
-        tvName = (EditText) findViewById(R.id.facTvName);
+        tvName = (EditText) findViewById(R.id.tvName);
         tvPhone = (EditText) findViewById(R.id.tvPhone);
         tvAdresse = (EditText) findViewById(R.id.tvAdresse);
         tvPlaque = (EditText) findViewById(R.id.tvPlaque);
         ivProfil = (ImageView) findViewById(R.id.ivProfil);
+        tvProfilUrl = (TextView) findViewById(R.id.tvProfilUrl);
         typevehicule = (EditText) findViewById(R.id.typevehicule);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -114,7 +117,7 @@ public class AddTaxi extends AppCompatActivity {
             // Continue only if the File was successfully created
             if (photoFile != null) {
                 Uri photoURI = FileProvider.getUriForFile(this,
-                        "com.example.android.fileprovider",
+                        "com.juliodev.taxihaiti",
                         photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
@@ -153,6 +156,14 @@ public class AddTaxi extends AppCompatActivity {
         Toast.makeText(AddTaxi.this, "ma photo " +bitmap, Toast.LENGTH_SHORT).show();
     }
     private void registerUser(){
+        /*
+        tvProfilUrl.setText(getIntent().getStringExtra("imageUrl"));
+        tvName.setText(getIntent().getStringExtra("taxiName"));
+        */
+        String taxiName  = getIntent().getStringExtra("taxiName");
+        String imageUrlPass  = getIntent().getStringExtra("imageUrl");
+        // Toast.makeText(AddTaxi.this,"my url"+imageUrlPass,Toast.LENGTH_LONG).show();
+       // imageUrlPass = tvProfilUrl.getText().toString().trim();
         final String nomUser = tvName.getText().toString().trim();
         final String phoneUser = tvPhone.getText().toString().trim();
         final String addressUser = tvAdresse.getText().toString().trim();
@@ -160,13 +171,13 @@ public class AddTaxi extends AppCompatActivity {
         final String vehiculeType = typevehicule.getText().toString().trim();
         Firebase.setAndroidContext(this);
         Firebase ref = new Firebase("https://taxihaiti-b8535.firebaseio.com");
-        if(nomUser.equals("") || phoneUser.equals("") || addressUser.equals("") || plaqueUser.equals("") || vehiculeType.equals("")   ){
+        if(nomUser.equals("") || phoneUser.equals("") || addressUser.equals("") || plaqueUser.equals("") || vehiculeType.equals("") ){
             Toast.makeText(AddTaxi.this,"Remplissez tous les champs",Toast.LENGTH_LONG).show();
         }
         else{
-            InsertUser add = new InsertUser(nomUser,phoneUser,addressUser,plaqueUser,vehiculeType );
+            InsertUser add = new InsertUser(nomUser,phoneUser,addressUser,plaqueUser,vehiculeType,imageUrlPass);
             ref.child("Chauffeur").push().setValue(add);
-            Toast.makeText(AddTaxi.this, "Inscription reussie", Toast.LENGTH_LONG).show();
+            Toast.makeText(AddTaxi.this, "Inscription réussie", Toast.LENGTH_LONG).show();
             Intent goToList = new Intent(AddTaxi.this, ListeTaxi.class);
             startActivity(goToList);
         }

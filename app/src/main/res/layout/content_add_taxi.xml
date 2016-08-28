@@ -22,13 +22,22 @@
         android:scaleType="centerCrop"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/tvProfilUrl"
+        android:background="#fff"
+        android:alpha="0"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    tvProfilUrl
     <ImageView
         android:layout_width="40dp"
         android:onClick="takePhoto"
         android:layout_height="40dp"
         android:id="@+id/ivTakePhoto"
         android:src="@drawable/camera"
-        android:layout_above="@+id/facTvName"
+        android:layout_above="@+id/tvName"
         android:layout_toRightOf="@+id/ivProfil"
         android:layout_toEndOf="@+id/ivProfil" />
 
@@ -38,7 +47,7 @@
         android:inputType="textPersonName"
         android:drawableLeft="@drawable/ic_action_userform"
         android:ems="10"
-        android:id="@+id/facTvName"
+        android:id="@+id/tvName"
         android:layout_below="@+id/ivProfil"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -54,11 +63,11 @@
         android:drawableLeft="@drawable/ic_action_name"
         android:ems="10"
         android:id="@+id/tvPhone"
-        android:layout_below="@+id/facTvName"
+        android:layout_below="@+id/tvName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/facTvName"
-        android:layout_alignEnd="@+id/facTvName" />
+        android:layout_alignRight="@+id/tvName"
+        android:layout_alignEnd="@+id/tvName" />
 
     <EditText
         android:layout_width="wrap_content"

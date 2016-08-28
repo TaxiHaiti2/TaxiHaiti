@@ -4,30 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="#fff"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.juliodev.taxihaiti.Details"
-    tools:showIn="@layout/activity_details">
+    tools:context="com.juliodev.taxihaiti.login.Profil"
+    tools:showIn="@layout/activity_profil"
+    android:background="#fff">
 
-<RelativeLayout
-    android:layout_height="200dp"
-    android:layout_width="match_parent"
-    android:background="#FF1E90FF"
-    android:alpha="1"
-    android:id="@+id/relativeLayout">
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
-        android:id="@+id/ivProfil"
-        android:src="@drawable/ic_action_logo"
 
-        android:scaleType="centerCrop"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:background="#FF1E90FF"
+        android:alpha="1"
+        android:id="@+id/relativeLayout">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/ivProfil"
+            android:src="@drawable/ic_action_logo"
+
+            android:scaleType="centerCrop"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,6 +69,7 @@
         android:text=""
         android:drawableLeft="@drawable/ic_action_location"
         android:ems="10"
+        android:alpha="0"
         android:id="@+id/tvAdresse"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/tvPlaque"
@@ -85,6 +86,7 @@
         android:padding="10dp"
         android:drawableLeft="@drawable/ic_action_plaque"
         android:ems="10"
+        android:alpha="0"
         android:id="@+id/tvPlaque"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/tvPhone"

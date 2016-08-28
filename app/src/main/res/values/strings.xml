@@ -9,5 +9,9 @@
     <string name="title_activity_login">Sign in</string>
     <string name="title_activity_after_search">AfterSearch</string>
     <string name="title_activity_fake_details">FakeDetails</string>
-
+    <string name="title_activity_facebook_login">facebook_login</string>
+    <string name="app_id">1612209815775803</string>
+    <string name="secret_key">2043cec2f46bf6a2b970971de1205806</string>
+    <string name="facebook_app_id">1612209815775803</string>
+    <string name="title_activity_profil">Profil</string>
 </resources>

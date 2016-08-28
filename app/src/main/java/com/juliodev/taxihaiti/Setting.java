@@ -37,7 +37,7 @@ public class Setting extends AppCompatActivity {
                     startActivity(i);
                     tvsetting.getText().toString();
                     // Share preferences
-                    Toast.makeText(Setting.this, "Vous venez de definir" + tvsetting.getText().toString()+"comme preference", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Setting.this, "Vous venez de définir" + tvsetting.getText().toString()+"comme préférence", Toast.LENGTH_LONG).show();
             }
         });
     }

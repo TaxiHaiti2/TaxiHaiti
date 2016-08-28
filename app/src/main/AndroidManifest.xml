@@ -17,6 +17,20 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+    <meta-data
+        android:name="com.facebook.sdk.ApplicationId"
+        android:value="@string/app_id" />
+
+    <activity
+        android:name="com.facebook.Facebook_login"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait" />
+
+    <provider
+        android:name="com.facebook.FacebookContentProvider"
+        android:authorities="com.facebook.app.FacebookContentProvider"
+        android:exported="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -73,6 +87,19 @@
         <activity
             android:name=".faceData.FakeDetails"
             android:label="@string/title_activity_fake_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".login.Facebook_login"
+            android:label="@string/title_activity_facebook_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".login.Profil"
+            android:label="@string/title_activity_profil"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

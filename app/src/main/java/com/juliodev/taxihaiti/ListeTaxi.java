@@ -87,14 +87,16 @@ public class ListeTaxi extends AppCompatActivity {
         fabSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               /*
-                Intent addTaxi =  new Intent(ListeTaxi.this,Setting.class);
-                startActivity(addTaxi);
-                overridePendingTransition(0,0);
-               */
                 showDialogue();
             }
         });
+
+       /*
+            Bundle inBundle = getIntent().getExtras();
+            String name = inBundle.get("name").toString();
+            String surname = inBundle.get("surname").toString();
+            String imageUrl = inBundle.get("imageUrl").toString();
+        */
     }
     //Show the dialog
     private void showDialogue (){
@@ -108,7 +110,7 @@ public class ListeTaxi extends AppCompatActivity {
                   public void onClick(View v) {
                       String settingText = tvsetting.getText().toString();
                       if(settingText.equals("")){
-                          Toast.makeText(ListeTaxi.this, "Entrer une zone de preference ", Toast.LENGTH_SHORT).show();
+                          Toast.makeText(ListeTaxi.this, "Entrer une zone de préférence ", Toast.LENGTH_SHORT).show();
                       }else{
                           Intent i = new Intent(ListeTaxi.this, ListeTaxi.class);
                           i.putExtra("zone",settingText);

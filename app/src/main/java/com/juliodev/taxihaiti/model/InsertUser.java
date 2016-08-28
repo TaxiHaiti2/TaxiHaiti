@@ -43,6 +43,15 @@ public class InsertUser implements Serializable {
         this.typevehicule = typevehicule;
     }
 
+    public String getFacimageUrl() {
+        return facimageUrl;
+    }
+
+    public void setFacimageUrl(String facimageUrl) {
+        this.facimageUrl = facimageUrl;
+    }
+
+    String facimageUrl;
     String nomcomplet;
     String telephone;
     String addresse;
@@ -67,12 +76,13 @@ public class InsertUser implements Serializable {
     public InsertUser() {
     }
 
-    public InsertUser(String nomcomplet, String telephone, String addresse, String plaque , String typevehicule) {
+    public InsertUser(String nomcomplet, String telephone, String addresse, String plaque , String typevehicule, String facimageUrl) {
         this.nomcomplet = nomcomplet;
         this.telephone = telephone;
         this.addresse = addresse;
         this.plaque = plaque;
         this.typevehicule = typevehicule;
+        this.facimageUrl = facimageUrl;
     }
 
 }

@@ -13,9 +13,9 @@ import com.squareup.picasso.Picasso;
 public class PicassoClient {
     public static void downloadImage(Context c, String url , ImageView img){
         if (url!=null && url.length()>0){
-            Picasso.with(c).load(url).placeholder(R.drawable.ic_action_userform).transform(new RoundedTransformation(100, 0)).centerCrop().into(img);
+            Picasso.with(c).load(url).placeholder(R.drawable.nopix).transform(new RoundedTransformation(120, 0)).centerCrop().into(img);
         }else{
-            Picasso.with(c).load(R.drawable.ic_action_userform).transform(new RoundedTransformation(100, 0)).fit().centerCrop().into(img);
+            Picasso.with(c).load(R.drawable.nopix).transform(new RoundedTransformation(120, 0)).fit().centerCrop().into(img);
         }
     }
 }
