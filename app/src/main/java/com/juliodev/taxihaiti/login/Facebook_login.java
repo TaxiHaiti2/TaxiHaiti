@@ -22,6 +22,10 @@ import com.facebook.login.widget.LoginButton;
 import com.juliodev.taxihaiti.ListeTaxi;
 import com.juliodev.taxihaiti.R;
 
+/**
+ * Created by carly.baja on 5/14/2017.
+ */
+
 public class Facebook_login extends AppCompatActivity {
 
     private CallbackManager callbackManager;
@@ -80,7 +84,7 @@ public class Facebook_login extends AppCompatActivity {
         accessTokenTracker.startTracking();
         profileTracker.startTracking();
 
-        LoginButton  loginButton = (LoginButton)findViewById(R.id.login_button);
+        LoginButton loginButton = (LoginButton)findViewById(R.id.login_button);
         callback = new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -139,3 +143,4 @@ public class Facebook_login extends AppCompatActivity {
         }
     }
 }
+
