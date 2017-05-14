@@ -71,6 +71,7 @@
             android:label="@string/title_activity_localisation"
             android:theme="@style/AppTheme.NoActionBar" />
         <!--
+        Replace
             <provider
                 android:name="android.support.v4.content.FileProvider"
                 android:authorities="com.juliodev.taxihaiti.android.fileprovider"
@@ -87,7 +88,7 @@
             android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"
             android:authorities="${applicationId}.google_measurement_service"
             android:exported="false" />
-        
+
         <activity
             android:name=".faceData.AfterSearch"
             android:label="@string/title_activity_after_search"
