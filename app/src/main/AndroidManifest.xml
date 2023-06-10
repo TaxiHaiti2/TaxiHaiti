@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.juliodev.taxihaiti">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -69,16 +70,24 @@
             android:name=".Localisation"
             android:label="@string/title_activity_localisation"
             android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+        Replace
+            <provider
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="com.juliodev.taxihaiti.android.fileprovider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+                <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/file_paths" />
+            </provider>
+        -->
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.example.android.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>
+            tools:replace="android:authorities"
+            android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"
+            android:authorities="${applicationId}.google_measurement_service"
+            android:exported="false" />
 
         <activity
             android:name=".faceData.AfterSearch"
